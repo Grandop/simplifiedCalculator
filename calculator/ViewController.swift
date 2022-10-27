@@ -88,23 +88,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func addDotDecimal(_ sender: UIButton) {
-        if performingCalc || labelOnDisplay.text!.isEmpty
-            {
+        if labelOnDisplay.text!.isEmpty {
             labelOnDisplay.text = "0."
-            performingCalc = false
-            }
-            else
-            {
-                if !labelOnDisplay.text!.contains(".") {
+        } else {
+            if !labelOnDisplay.text!.contains(".") {
                     labelOnDisplay.text! +=  "."
-                }
             }
-            numberOnScreen = Double(labelOnDisplay.text!)!
+        }
+        numberOnScreen = Double(labelOnDisplay.text!)!
         }
     }
-    
-
-    
-    
-    
-
